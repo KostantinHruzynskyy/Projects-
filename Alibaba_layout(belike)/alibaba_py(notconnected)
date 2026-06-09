@@ -1,0 +1,110 @@
+# Simple Marketplace (Console Version)
+
+products = [
+    {"id": 1, "name": "Wireless Headphones", "price": 49.99},
+    {"id": 2, "name": "Smart Watch", "price": 89.99},
+    {"id": 3, "name": "Gaming Keyboard", "price": 59.99},
+    {"id": 4, "name": "Bluetooth Speaker", "price": 39.99},
+    {"id": 5, "name": "Running Shoes", "price": 59.99},
+    {"id": 6, "name": "Backpack", "price": 34.99},
+]
+
+cart = []
+
+# SHOW PRODUCTS
+def show_products():
+    print("\n📦 PRODUCTS:")
+    for p in products:
+        print(f"{p['id']}. {p['name']} - ${p['price']}")
+
+# SEARCH PRODUCTS
+def search():
+    query = input("\n🔍 Search product: ").lower()
+    found = False
+
+    for p in products:
+        if query in p["name"].lower():
+            print(f"✔ {p['id']}. {p['name']} - ${p['price']}")
+            found = True
+
+    if not found:
+        print("❌ No products found")
+
+# ADD TO CART
+def add_to_cart():
+    show_products()
+    try:
+        pid = int(input("\nEnter product ID to add: "))
+
+        for p in products:
+            if p["id"] == pid:
+                cart.append(p)
+                print(f"✔ Added {p['name']} to cart")
+                return
+
+        print("❌ Invalid product ID")
+
+    except:
+        print("❌ Error")
+
+# VIEW CART
+def view_cart():
+    print("\n🛒 YOUR CART:")
+    total = 0
+
+    if not cart:
+        print("Cart is empty")
+        return
+
+    for i, p in enumerate(cart, 1):
+        print(f"{i}. {p['name']} - ${p['price']}")
+        total += p["price"]
+
+    print(f"\n💰 Total: ${total:.2f}")
+
+# CHECKOUT
+def checkout():
+    if not cart:
+        print("\n❌ Cart is empty")
+        return
+
+    view_cart()
+    confirm = input("\nProceed to checkout? (y/n): ")
+
+    if confirm.lower() == "y":
+        print("\n✅ Order placed successfully!")
+        cart.clear()
+    else:
+        print("❌ Checkout cancelled")
+
+# MENU
+def menu():
+    while True:
+        print("\n====== TRADEHUB MARKETPLACE ======")
+        print("1. View Products")
+        print("2. Search Products")
+        print("3. Add to Cart")
+        print("4. View Cart")
+        print("5. Checkout")
+        print("6. Exit")
+
+        choice = input("\nSelect option: ")
+
+        if choice == "1":
+            show_products()
+        elif choice == "2":
+            search()
+        elif choice == "3":
+            add_to_cart()
+        elif choice == "4":
+            view_cart()
+        elif choice == "5":
+            checkout()
+        elif choice == "6":
+            print("👋 Goodbye!")
+            break
+        else:
+            print("❌ Invalid choice")
+
+# RUN PROGRAM
+menu()
