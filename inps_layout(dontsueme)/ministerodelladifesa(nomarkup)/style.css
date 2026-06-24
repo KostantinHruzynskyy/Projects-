@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portale Istituzionale Difesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <span>Repubblica Italiana</span>
+        </div>
+    </div>
+
+    <div class="main-header container">
+        <div class="logo">
+            <h1>PORTALE DIFESA</h1>
+            <p>Servizi e Informazioni Istituzionali</p>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Ministero</a>
+            <a href="#">Forze Armate</a>
+            <a href="#">Comunicati</a>
+            <a href="#">Contatti</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="overlay">
+        <div class="hero-content">
+            <h2>Difesa, Sicurezza e Servizi al Cittadino</h2>
+            <p>
+                Informazioni istituzionali, comunicati ufficiali,
+                servizi digitali e aggiornamenti.
+            </p>
+
+            <button>Scopri di più</button>
+        </div>
+    </div>
+</section>
+
+<section class="services container">
+
+    <div class="card">
+        <h3>Servizi Online</h3>
+        <p>Accesso ai servizi digitali dedicati ai cittadini.</p>
+    </div>
+
+    <div class="card">
+        <h3>Comunicati</h3>
+        <p>Ultime notizie e aggiornamenti istituzionali.</p>
+    </div>
+
+    <div class="card">
+        <h3>Concorsi</h3>
+        <p>Informazioni su bandi e procedure selettive.</p>
+    </div>
+
+    <div class="card">
+        <h3>Documentazione</h3>
+        <p>Normative, pubblicazioni e documenti ufficiali.</p>
+    </div>
+
+</section>
+
+<section class="news">
+    <div class="container">
+
+        <h2>Ultime Comunicazioni</h2>
+
+        <div class="news-grid">
+
+            <article>
+                <h4>Comunicato Ufficiale</h4>
+                <p>Pubblicato il nuovo aggiornamento dei servizi online.</p>
+            </article>
+
+            <article>
+                <h4>Attività Istituzionali</h4>
+                <p>Eventi e iniziative promosse dagli enti competenti.</p>
+            </article>
+
+            <article>
+                <h4>Avvisi</h4>
+                <p>Informazioni e scadenze di interesse pubblico.</p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Portale Istituzionale Difesa</p>
+    </div>
+</footer>
+
+</body>
+</html>
